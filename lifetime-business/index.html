@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build a Lifetime Business — No Monthly Costs</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .team-logo {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+        .team-logo span { color: #00d4ff; }
+        .partner-logo {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 100;
+        }
+        .partner-logo img {
+            height: 140px;
+            width: auto;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+        .partner-logo img:hover { opacity: 1; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 620px;
+            text-align: center;
+            padding: 40px 30px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+        h1 {
+            font-size: 32px;
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+        h1 span { color: #00d4ff; }
+        .subtitle {
+            font-size: 18px;
+            color: #b0b0cc;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        /* Steps */
+        .steps {
+            margin-bottom: 30px;
+        }
+        .step-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            text-align: left;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            transition: border-color 0.3s;
+        }
+        .step-card:hover {
+            border-color: rgba(0,212,255,0.4);
+        }
+        .step-num {
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            color: #0f0c29;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .step-content h3 {
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+        .step-content h3 .highlight { color: #00d4ff; }
+        .step-content p {
+            font-size: 15px;
+            color: #b0b0cc;
+            line-height: 1.5;
+        }
+
+        /* Result box */
+        .result-box {
+            background: linear-gradient(135deg, rgba(0,255,136,0.08), rgba(0,212,255,0.08));
+            border: 2px solid #00ff88;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .result-box h2 {
+            font-size: 22px;
+            color: #00ff88;
+            margin-bottom: 10px;
+        }
+        .result-box p {
+            font-size: 16px;
+            color: #b0b0cc;
+            line-height: 1.5;
+        }
+        .result-box .big-point {
+            font-size: 20px;
+            color: #fff;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+        .result-box .big-point span { color: #00ff88; }
+
+        /* Why it works */
+        .benefits {
+            text-align: left;
+            margin: 0 auto 30px;
+            max-width: 460px;
+        }
+        .benefit {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        .benefit .icon {
+            font-size: 22px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            color: #fff;
+            text-decoration: none;
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 25px rgba(0, 212, 255, 0.3);
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 35px rgba(0, 212, 255, 0.5);
+        }
+        .subtext {
+            margin-top: 14px;
+            font-size: 14px;
+            color: #888;
+        }
+        .copyright {
+            text-align: center;
+            color: #555;
+            font-size: 12px;
+            margin-top: 30px;
+            padding-bottom: 20px;
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="team-logo">🎯 <span>Downliner</span><br>Affiliate Pro Team</div>
+    <a href="https://thedownliner.com/?r=43752" class="partner-logo"><img src="https://thedownliner.com/images/tdlpartner.png" title="The Ultimate Cooperative" alt="The Downliner - The Ultimate Cooperative"/></a>
+    <div class="container">
+        <div class="badge">💼 SIMPLE 3-STEP BUSINESS</div>
+        <h1>Build a <span>Lifetime Business</span> With Zero Monthly Costs</h1>
+        <p class="subtitle">No tech skills. No recurring fees. Just a proven system that earns you commissions — once you set it up, it keeps working for you.</p>
+
+        <div class="steps">
+            <div class="step-card">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h3>🆓 <span class="highlight">Join</span> The Downliner — Free</h3>
+                    <p>Create your free account in under a minute. You instantly get your own affiliate link and access to the cooperative traffic system.</p>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h3>♾️ Get the <span class="highlight">Lifetime Upgrade</span></h3>
+                    <p>One single payment — no monthly fees, ever. You now earn up to 50% commissions on every referral who upgrades. This is your business with zero running costs.</p>
+                </div>
+            </div>
+            <div class="step-card">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <h3>🚀 <span class="highlight">Promote</span> With Free Credits</h3>
+                    <p>Use the free advertising credits you get from The Downliner <strong>plus bonus credits from me</strong> to promote your affiliate link. No ad budget needed — your traffic is free.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <h2>✅ The Result</h2>
+            <p>People join through your link, upgrade, and you earn commissions — while the cooperative drives even more traffic to your pages automatically.</p>
+            <p class="big-point">One payment. <span>Free traffic.</span> Lifetime income.</p>
+        </div>
+
+        <h2 class="section-title">Why This Works</h2>
+        <div class="benefits">
+            <div class="benefit">
+                <span class="icon">💸</span>
+                <span><strong>No monthly overhead</strong> — lifetime upgrade means your profit margin is 100% after one payment</span>
+            </div>
+            <div class="benefit">
+                <span class="icon">🎁</span>
+                <span><strong>Free traffic to start</strong> — platform credits + my bonus credits get you going without spending on ads</span>
+            </div>
+            <div class="benefit">
+                <span class="icon">🤝</span>
+                <span><strong>Cooperative advantage</strong> — the whole community surfs together, so everyone gets more exposure</span>
+            </div>
+            <div class="benefit">
+                <span class="icon">📈</span>
+                <span><strong>Compounds over time</strong> — every referral who upgrades earns you commissions and adds more co-op traffic</span>
+            </div>
+            <div class="benefit">
+                <span class="icon">🔄</span>
+                <span><strong>Truly passive</strong> — once your link is out there, it keeps working whether you're online or not</span>
+            </div>
+        </div>
+
+        <a href="https://vikingbeavergames-coder.github.io/downliner-promo/" class="cta-btn">Join Free &amp; Earn for Lifetime →</a>
+        <p class="subtext">Free to join. No credit card needed. Start building today.</p>
+    </div>
+    <p class="copyright">© 2026 Downliner Affiliate Pro Team. All rights reserved.</p>
+</body>
+</html>
