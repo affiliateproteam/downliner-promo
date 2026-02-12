@@ -6,12 +6,41 @@
     <title>Join The Downliner + Get FREE Bonus Traffic</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        .team-logo {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+        .team-logo span {
+            color: #00d4ff;
+        }
+        .partner-logo {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 100;
+        }
+        .partner-logo img {
+            height: 140px;
+            width: auto;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+        .partner-logo img:hover {
+            opacity: 1;
+        }
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
             color: #fff;
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 20px;
@@ -210,9 +239,20 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 30px rgba(255,107,53,0.5);
         }
+        .copyright {
+            text-align: center;
+            color: #555;
+            font-size: 12px;
+            margin-top: 30px;
+            padding-bottom: 20px;
+            width: 100%;
+            display: block;
+        }
     </style>
 </head>
 <body>
+    <div class="team-logo">🎯 <span>Downliner</span><br>Affiliate Pro Team</div>
+    <a href="https://thedownliner.com/?r=43752" class="partner-logo"><img src="https://thedownliner.com/images/tdlpartner.png" title="The Ultimate Cooperative" alt="The Downliner - The Ultimate Cooperative"/></a>
     <div class="container">
         <div class="badge">🎁 EXCLUSIVE BONUS OFFER</div>
         <h1>Get <span>Real Traffic</span> + My FREE Bonus Package</h1>
@@ -284,12 +324,13 @@
         <div class="contact-box" id="claim">
             <h2>📩 Claim Your Bonus</h2>
             <p>Already joined &amp; upgraded? Drop your details below and I'll send your free traffic + credits!</p>
-            <form action="https://formspree.io/f/xaqdqpwk" method="POST">
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                 <input type="text" name="username" placeholder="Your Downliner username" required>
                 <input type="text" name="ptp_link" placeholder="Your PTP link (where to send traffic)" required>
                 <button type="submit">Claim My Bonus 🎁</button>
             </form>
         </div>
     </div>
+    <p class="copyright">© 2026 Downliner Affiliate Pro Team. All rights reserved.</p>
 </body>
 </html>
