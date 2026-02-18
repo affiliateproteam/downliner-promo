@@ -3,165 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#5b2d8e">
     <title>Join The Downliner + Get FREE Bonus Traffic</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --purple: #5b2d8e;
-            --purple-light: #7c4dbd;
-            --purple-bg: #f6f4fe;
-            --gold: #ffc107;
-            --gold-dark: #e5a800;
-            --green: #27ae60;
-            --text: #2d2d3f;
-            --text-light: #6b6b80;
-            --white: #ffffff;
-            --border: #e8e4f0;
-        }
-        body {
-            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-            background: var(--purple-bg);
-            color: var(--text);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        /* === TOP BAR === */
-        .top-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            background: linear-gradient(135deg, var(--purple), var(--purple-light));
-            padding: 18px 32px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 4px 16px rgba(91, 45, 142, 0.3);
-        }
         .team-logo {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            color: var(--white);
-        }
-        .team-logo .logo-text {
-            font-size: 20px;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            font-size: 18px;
             font-weight: 700;
-            line-height: 1.2;
+            color: #fff;
+            letter-spacing: 0.5px;
         }
-        .team-logo .logo-text span {
-            color: var(--gold);
+        .team-logo span {
+            color: #00d4ff;
         }
         .team-profile {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-left: 8px;
-            padding-left: 16px;
-            border-left: 2px solid rgba(255,255,255,0.2);
+            gap: 10px;
+            margin-top: 10px;
         }
         .team-profile img {
-            width: 52px;
-            height: 52px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--gold);
-            box-shadow: 0 0 12px rgba(255, 193, 7, 0.35);
+            border: 2px solid #00d4ff;
+            box-shadow: 0 0 12px rgba(0, 212, 255, 0.3);
         }
         .team-profile .presented {
             font-size: 12px;
-            color: rgba(255,255,255,0.7);
+            color: #b0b0cc;
             line-height: 1.3;
         }
         .team-profile .presented strong {
             display: block;
-            font-size: 15px;
-            color: var(--white);
+            font-size: 14px;
+            color: #fff;
+        }
+        .partner-logo {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 100;
         }
         .partner-logo img {
-            height: 64px;
+            height: 140px;
             width: auto;
-            opacity: 0.95;
+            opacity: 0.9;
             transition: opacity 0.2s;
         }
-        .partner-logo img:hover { opacity: 1; }
-
-        /* === HERO === */
-        .hero {
-            margin-top: 110px;
-            background: var(--white);
-            border-radius: 24px;
-            max-width: 660px;
-            width: 100%;
-            padding: 48px 36px 40px;
+        .partner-logo img:hover {
+            opacity: 1;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 620px;
             text-align: center;
-            box-shadow: 0 4px 24px rgba(91, 45, 142, 0.08);
-            border: 1px solid var(--border);
+            padding: 40px 30px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
         }
         .badge {
             display: inline-block;
-            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-            color: var(--text);
-            padding: 6px 18px;
+            background: #ff6b35;
+            color: #fff;
+            padding: 6px 16px;
             border-radius: 20px;
-            font-size: 13px;
-            font-weight: 700;
+            font-size: 14px;
+            font-weight: 600;
             margin-bottom: 20px;
             letter-spacing: 0.5px;
-            text-transform: uppercase;
         }
         h1 {
-            font-size: 34px;
-            line-height: 1.25;
-            margin-bottom: 14px;
-            font-weight: 800;
-            color: var(--text);
+            font-size: 32px;
+            line-height: 1.3;
+            margin-bottom: 16px;
         }
         h1 span {
-            color: var(--purple);
+            color: #00d4ff;
         }
         .subtitle {
-            font-size: 17px;
-            color: var(--text-light);
-            margin-bottom: 32px;
-            line-height: 1.6;
+            font-size: 18px;
+            color: #b0b0cc;
+            margin-bottom: 30px;
+            line-height: 1.5;
         }
-
-        /* === PROMO BOX === */
         .promo-box {
-            background: linear-gradient(135deg, #fdf8e8, #fef9ec);
-            border: 2px solid var(--gold);
+            background: linear-gradient(135deg, rgba(255,107,53,0.15), rgba(255,60,60,0.15));
+            border: 2px solid #ff6b35;
             border-radius: 16px;
-            padding: 28px 24px;
-            margin-bottom: 32px;
+            padding: 24px;
+            margin-bottom: 30px;
             text-align: left;
         }
         .promo-box h2 {
-            font-size: 20px;
-            color: var(--gold-dark);
-            margin-bottom: 16px;
+            font-size: 22px;
+            color: #ff6b35;
+            margin-bottom: 12px;
             text-align: center;
-            font-weight: 700;
         }
         .promo-box .step {
             display: flex;
             align-items: flex-start;
             gap: 12px;
             margin-bottom: 12px;
-            font-size: 15px;
-            line-height: 1.5;
-            color: var(--text);
+            font-size: 16px;
+            line-height: 1.4;
         }
         .promo-box .step .num {
-            background: var(--purple);
+            background: #ff6b35;
             color: #fff;
             width: 28px;
             height: 28px;
@@ -176,116 +141,89 @@
         .bonus-list {
             margin-top: 16px;
             padding-top: 16px;
-            border-top: 1px solid rgba(229, 168, 0, 0.3);
+            border-top: 1px solid rgba(255,107,53,0.3);
         }
         .bonus-item {
             display: flex;
             align-items: flex-start;
             gap: 10px;
             margin-bottom: 10px;
-            font-size: 15px;
+            font-size: 16px;
         }
         .bonus-item .icon { font-size: 20px; flex-shrink: 0; }
-
-        /* === STATS === */
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-bottom: 32px;
-            padding: 24px 0;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-        .stat { text-align: center; }
-        .stat-number {
-            font-size: 30px;
-            font-weight: 800;
-            color: var(--purple);
-        }
-        .stat-label {
-            font-size: 12px;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-        }
-
-        /* === BENEFITS === */
         .benefits {
             text-align: left;
-            margin: 0 auto 32px;
-            max-width: 480px;
+            margin: 0 auto 30px;
+            max-width: 440px;
         }
         .benefit {
             display: flex;
             align-items: flex-start;
-            gap: 14px;
+            gap: 12px;
             margin-bottom: 16px;
-            font-size: 15px;
-            line-height: 1.5;
+            font-size: 16px;
+            line-height: 1.4;
         }
         .benefit .icon {
-            font-size: 24px;
+            font-size: 22px;
             flex-shrink: 0;
-            width: 40px;
-            height: 40px;
-            background: var(--purple-bg);
-            border-radius: 10px;
+            margin-top: 2px;
+        }
+        .stats {
             display: flex;
-            align-items: center;
             justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
         }
-        .benefit a {
-            color: var(--purple);
-            text-decoration: none;
+        .stat { text-align: center; }
+        .stat-number {
+            font-size: 28px;
             font-weight: 700;
+            color: #00d4ff;
         }
-        .benefit a:hover { text-decoration: underline; }
-
-        /* === CTA === */
+        .stat-label {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
         .cta-btn {
             display: inline-block;
-            background: linear-gradient(135deg, var(--green), #2ecc71);
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
             color: #fff;
             text-decoration: none;
-            padding: 18px 52px;
+            padding: 18px 50px;
             border-radius: 50px;
             font-size: 20px;
             font-weight: 700;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 20px rgba(39, 174, 96, 0.3);
+            box-shadow: 0 4px 25px rgba(0, 212, 255, 0.3);
         }
         .cta-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 30px rgba(39, 174, 96, 0.45);
+            box-shadow: 0 6px 35px rgba(0, 212, 255, 0.5);
         }
         .subtext {
             margin-top: 14px;
-            font-size: 13px;
-            color: var(--text-light);
+            font-size: 14px;
+            color: #888;
         }
-
-        /* === CONTACT BOX === */
         .contact-box {
             margin-top: 40px;
-            background: var(--purple-bg);
-            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.15);
             border-radius: 16px;
             padding: 28px 24px;
             text-align: center;
         }
         .contact-box h2 {
             font-size: 22px;
-            margin-bottom: 8px;
-            color: var(--purple);
-            font-weight: 700;
+            margin-bottom: 10px;
         }
         .contact-box p {
-            color: var(--text-light);
-            font-size: 14px;
+            color: #b0b0cc;
+            font-size: 15px;
             margin-bottom: 20px;
-            line-height: 1.5;
         }
         .contact-box form {
             display: flex;
@@ -298,98 +236,63 @@
         .contact-box textarea {
             padding: 14px 16px;
             border-radius: 10px;
-            border: 1px solid var(--border);
-            background: var(--white);
-            color: var(--text);
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.08);
+            color: #fff;
             font-size: 15px;
             font-family: inherit;
             resize: none;
-            transition: border-color 0.2s;
-        }
-        .contact-box input:focus,
-        .contact-box textarea:focus {
-            outline: none;
-            border-color: var(--purple-light);
-            box-shadow: 0 0 0 3px rgba(91, 45, 142, 0.1);
         }
         .contact-box input::placeholder,
         .contact-box textarea::placeholder {
-            color: #aaa;
+            color: #777;
         }
         .contact-box button {
             padding: 16px;
             border-radius: 50px;
             border: none;
-            background: linear-gradient(135deg, var(--purple), var(--purple-light));
+            background: linear-gradient(135deg, #ff6b35, #ff4444);
             color: #fff;
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 700;
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 16px rgba(91, 45, 142, 0.25);
+            box-shadow: 0 4px 20px rgba(255,107,53,0.3);
         }
         .contact-box button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 24px rgba(91, 45, 142, 0.4);
-        }
-
-        /* === STATS FRAME === */
-        .stats-section h2 {
-            font-size: 22px;
-            margin-top: 40px;
-            margin-bottom: 16px;
-            color: var(--purple);
-            font-weight: 700;
+            box-shadow: 0 6px 30px rgba(255,107,53,0.5);
         }
         .rotator-frame {
             width: 100%;
             height: 400px;
-            border: 1px solid var(--border);
+            border: 2px solid rgba(255,255,255,0.15);
             border-radius: 12px;
             margin-bottom: 30px;
-            background: var(--white);
+            background: #111;
         }
-
-        /* === FOOTER === */
         .copyright {
             text-align: center;
-            color: var(--text-light);
+            color: #555;
             font-size: 12px;
             margin-top: 30px;
             padding-bottom: 20px;
-        }
-
-        /* === MOBILE === */
-        @media (max-width: 680px) {
-            .top-bar { padding: 14px 16px; flex-wrap: wrap; gap: 8px; }
-            .team-logo .logo-text { font-size: 15px; }
-            .partner-logo img { height: 44px; }
-            .team-profile img { width: 42px; height: 42px; }
-            .team-profile { margin-left: 4px; padding-left: 10px; }
-            .hero { padding: 36px 20px 32px; margin-top: 100px; border-radius: 18px; }
-            h1 { font-size: 26px; }
-            .subtitle { font-size: 15px; }
-            .stats { gap: 20px; }
-            .stat-number { font-size: 24px; }
-            .cta-btn { padding: 16px 36px; font-size: 18px; }
+            width: 100%;
+            display: block;
         }
     </style>
 </head>
 <body>
-
-    <div class="top-bar">
-        <div class="team-logo">
-            <div class="logo-text">🎯 <span>Downliner</span><br>Affiliate Pro Team</div>
-            <div class="team-profile">
-                <img src="data:image/jpeg;base64,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" alt="Sebastian">
-                <span class="presented">presented by<strong>Sebastian</strong></span>
-            </div>
+    <div class="team-logo">
+        🎯 <span>Downliner</span><br>Affiliate Pro Team
+        <div class="team-profile">
+            <img src="data:image/jpeg;base64,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" alt="Sebastian">
+            <span class="presented">presented by<strong>Sebastian</strong></span>
         </div>
-        <a href="https://thedownliner.com/?r=43752" class="partner-logo"><img src="https://thedownliner.com/images/tdlpartner.png" title="The Ultimate Cooperative" alt="The Downliner - The Ultimate Cooperative"/></a>
     </div>
-
-    <div class="hero">
-        <div class="badge">🎁 Exclusive Bonus Offer</div>
+    <a href="https://thedownliner.com/?r=43752" class="partner-logo"><img src="https://thedownliner.com/images/tdlpartner.png" title="The Ultimate Cooperative" alt="The Downliner - The Ultimate Cooperative"/></a>
+    <div class="container">
+        <div class="badge">🎁 EXCLUSIVE BONUS OFFER</div>
         <h1>Get <span>Real Traffic</span> + My FREE Bonus Package</h1>
         <p class="subtitle">Join The Downliner through my link, upgrade, and I'll personally send free traffic to YOUR links — on top of everything the platform already gives you.</p>
 
@@ -441,7 +344,7 @@
             </div>
             <div class="benefit">
                 <span class="icon">📊</span>
-                <span><strong>Real analytics</strong> — visitor duration, IP, country &amp; more</span>
+                <span><strong>Real analytics</strong> — visitor duration, IP, country & more</span>
             </div>
             <div class="benefit">
                 <span class="icon">💰</span>
@@ -453,7 +356,7 @@
             </div>
             <div class="benefit">
                 <span class="icon">💵</span>
-                <span><a href="https://affiliateproteam.github.io/downliner-promo/lifetime-business/">Build your <strong>Lifetime Business</strong> →</a></span>
+                <span><a href="https://affiliateproteam.github.io/downliner-promo/lifetime-business/" style="color: #fff; text-decoration: none; font-weight: 700;">Build your <span style="color: #00d4ff;">Lifetime Business</span> →</a></span>
             </div>
         </div>
 
@@ -470,12 +373,9 @@
             </form>
         </div>
 
-        <div class="stats-section">
-            <h2>📊 Promotion Statistics</h2>
-            <iframe src="https://tpmr.com/s/98293" class="rotator-frame" frameborder="0" allowfullscreen></iframe>
-        </div>
+        <h2 style="font-size: 24px; margin-top: 40px; margin-bottom: 16px;">📊 Promotion Statistics</h2>
+        <iframe src="https://tpmr.com/s/98293" class="rotator-frame" frameborder="0" allowfullscreen></iframe>
     </div>
-
     <p class="copyright">© 2026 Downliner Affiliate Pro Team. All rights reserved.</p>
 </body>
 </html>
