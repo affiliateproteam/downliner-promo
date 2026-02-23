@@ -252,6 +252,61 @@
             color: #00d4ff;
             font-style: normal;
         }
+        .contact-box {
+            margin-top: 40px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+        }
+        .contact-box h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .contact-box p {
+            color: #b0b0cc;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        .contact-box form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .contact-box input,
+        .contact-box textarea {
+            padding: 14px 16px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.08);
+            color: #fff;
+            font-size: 15px;
+            font-family: inherit;
+            resize: none;
+        }
+        .contact-box input::placeholder,
+        .contact-box textarea::placeholder {
+            color: #777;
+        }
+        .contact-box button {
+            padding: 16px;
+            border-radius: 50px;
+            border: none;
+            background: linear-gradient(135deg, #ff6b35, #ff4444);
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(255,107,53,0.3);
+        }
+        .contact-box button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(255,107,53,0.5);
+        }
         .rotator-frame {
             width: 100%;
             height: 400px;
